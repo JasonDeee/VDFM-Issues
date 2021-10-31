@@ -821,7 +821,7 @@ p {
 }
 
 #sec2_5 .sec2_pending {
-  opacity: 0;
+  color: #29292900;
   -webkit-transform: translateY(120%) rotate(65deg);
           transform: translateY(120%) rotate(65deg);
 }
