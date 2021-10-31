@@ -20,16 +20,77 @@ const side_picCircle = document.querySelectorAll(".side_pic #circle");
 
 // Section 2
 const sec2 = document.querySelector("#sec2");
+const sec2_5 = document.querySelector("#sec2_5");
 const main_block = document.querySelector("#sec2 .main_block");
 
 const BottomBlockL = document.querySelector("#sec2 .BottomBlock .leftBlock");
 const BottomBlockR = document.querySelector("#sec2 .BottomBlock .question");
-const sec2Video = document.querySelector("#sec2 video");
+
+// Section 2_5
+const sec2_5_Content = document.querySelector("#sec2_5 h2");
 
 // Section 3
 
 const sec3 = document.querySelector("#sec3");
 const sec3LeftSide = document.querySelector("#sec3 #left_col");
+const TitleContent_L = document.querySelector("#sec3 #left_col .contents");
+const TitleContent_R = document.querySelector("#sec3 .Sec3_Title");
+
+// Sec 4
+const sec4 = document.querySelector("#sec4");
+const sec4LeftSide = document.querySelector("#sec4 #left_col");
+const BlurImage = document.querySelector("#sec4 #Blured");
+const OriginImage = document.querySelector("#sec4 #Origin");
+const Sec4TitleR = document.querySelector("#sec4 .Sec4_title");
+const Sec4TitleL = document.querySelector("#sec4 .Main_Title");
+const AltCursor = document.querySelector(".Free_Circle_Cursor");
+
+function TitleAnimateSec4() {
+  var Sec4Time = setTimeout(() => {
+    // Trigger On 75% Windows Height
+    if (
+      Sec4TitleR.getBoundingClientRect().top +
+        Sec4TitleR.getBoundingClientRect().height <
+      0
+    ) {
+      BlurImage.style.filter = `blur(1vw) saturate(0)`;
+      Sec4TitleL.classList.add("Main_Title_Active");
+    } else {
+      BlurImage.style = ``;
+      Sec4TitleL.classList.remove("Main_Title_Active");
+    }
+
+    clearTimeout(Sec4Time);
+  }, 700);
+}
+
+sec4LeftSide.addEventListener("mouseenter", sec4MouseEnter);
+function sec4MouseEnter() {
+  AltCursor.style.opacity = `1`;
+  OriginImage.style.transition = `all 0.8s cubic-bezier(0.25, 0, 0, 1), clip-path 0s linear`;
+  OriginImage.style.opacity = `1`;
+}
+sec4LeftSide.addEventListener("mouseleave", sec4MouseLeave);
+function sec4MouseLeave() {
+  AltCursor.style.opacity = `0`;
+  OriginImage.style = ``;
+}
+sec4LeftSide.addEventListener("mousemove", sec4MouseMove);
+function sec4MouseMove(e) {
+  // Origin Image
+  OriginImage.style.clipPath = `circle(10vw at ${e.pageX}px ${
+    e.pageY - window.scrollY - sec4LeftSide.getBoundingClientRect().top
+  }px)`;
+
+  // Cursor
+  AltCursor.style.left = `${
+    e.pageX - AltCursor.getBoundingClientRect().width / 2
+  }px`;
+  AltCursor.style.top = `${
+    e.pageY - AltCursor.getBoundingClientRect().height / 2 - window.scrollY
+  }px`;
+}
+//
 
 let sx = 0, // For scroll positions
   sy = 0;
@@ -60,7 +121,7 @@ title.innerHTML = ``;
 
 for (let index = 0; index < titleArray.length; index++) {
   if (titleArray[index] == " ") {
-    titleArray[index] = "&nbsp";
+    titleArray[index] = "&nbsp;";
   }
   title.innerHTML += `<span class="pending" style="transition: all 0.8s ${
     index * 0.025
@@ -105,6 +166,54 @@ function TitleAnimate() {
   }, 700);
 }
 
+//
+
+// Title OnAnimate Out - Section 2_5
+const Sec2titleArray = sec2_5_Content.innerText.split("");
+sec2_5_Content.innerHTML = ``;
+
+for (let index = 0; index < Sec2titleArray.length; index++) {
+  if (Sec2titleArray[index] == " ") {
+    Sec2titleArray[index] = "&nbsp;";
+  }
+  sec2_5_Content.innerHTML += `<span class="sec2_pending" style="transition: all 0.8s ${
+    index * 0.025
+  }s cubic-bezier(0.25, 0, 0, 1);">${Sec2titleArray[index]}</span>`;
+
+  if (index == Sec2titleArray.length - 1) {
+    break;
+  }
+}
+
+const Sec2TitleSpan = document.querySelectorAll("#sec2_5 h2 span");
+
+function Sec2TitleAnimate() {
+  var TitleAnimateWait2 = setTimeout(() => {
+    if (
+      sec2_5_Content.getBoundingClientRect().top +
+        sec2_5_Content.getBoundingClientRect().height * 2.2 -
+        window.innerHeight <
+      0
+    ) {
+      Sec2TitleSpan.forEach((Element) => {
+        Element.classList.remove("sec2_pending");
+        // Element.style -= `transition:none`;
+      });
+    } else if (
+      sec2_5_Content.getBoundingClientRect().top -
+        sec2_5_Content.getBoundingClientRect().height * 0.05 -
+        window.innerHeight >
+      0
+    ) {
+      Sec2TitleSpan.forEach((Element) => {
+        Element.classList.add("sec2_pending");
+        // Element.style += `transition:none`;
+      });
+    }
+    clearTimeout(TitleAnimateWait2);
+  }, 700);
+}
+
 window.addEventListener("resize", (e) => {
   var resizetime = setTimeout(() => {
     let bodyHeight = main.getBoundingClientRect().height;
@@ -128,22 +237,40 @@ function SceneAnimate() {
 
       BottomBlockL.style.transform = `none`;
       BottomBlockR.style.transform = `none`;
-
-      sec2Video.play();
     } else {
       main_block.style = ``;
 
       BottomBlockL.style = ``;
       BottomBlockR.style = ``;
-
-      sec2Video.pause();
     }
 
     clearTimeout(Sec2Time);
   }, 700);
 }
-
 //
+
+// Title Animation In sec3
+
+function TitleAnimateSec3() {
+  var Sec3Time = setTimeout(() => {
+    // Trigger On 75% Windows Height
+    if (
+      TitleContent_R.getBoundingClientRect().top +
+        TitleContent_R.getBoundingClientRect().height <
+      0
+    ) {
+      TitleContent_L.style.opacity = `1`;
+    } else {
+      TitleContent_L.style = ``;
+    }
+
+    clearTimeout(Sec3Time);
+  }, 700);
+}
+//
+
+// Title Animation In sec4
+
 // Momentum Scrolling
 
 // Scroll Functions
@@ -154,11 +281,17 @@ window.addEventListener("scroll", (e) => {
   TitleAnimate(); // Title Animate In - Sec 1
 
   SceneAnimate(); // SceneTitle Animate In - Sec 2
+
+  Sec2TitleAnimate(); // Title Animate Sec2_5
+
+  TitleAnimateSec3(); // Title Animation In sec3
+
+  TitleAnimateSec4(); // Title Animation In sec4
 });
 
 var lastScrollTop = 0;
 function ReturnButton() {
-  if (window.scrollY == 0) {
+  if (window.scrollY === 0) {
     return_button.style.boxShadow = `0 0 1vw #00000000`;
   } else if (window.scrollY > 0) {
     return_button.style.boxShadow = `0 0 1vw #00000080`;
@@ -179,7 +312,7 @@ function ReturnButton() {
 function easeScroll() {
   // sx = window.pageXOffset;
   sy = window.pageYOffset;
-  console.log(sy);
+  // console.log(sy);
 }
 
 window.requestAnimationFrame(render);
@@ -233,14 +366,14 @@ function render() {
 
   //sec 2
   if (
-    sec3.getBoundingClientRect().top - window.innerHeight <= 0 &&
-    sec3.getBoundingClientRect().top >= 0
+    sec2_5.getBoundingClientRect().top - window.innerHeight <= 0 &&
+    sec2_5.getBoundingClientRect().top >= 0
   ) {
     sec2.style.transition = `none`;
     sec2.style.transform = `translateY(${
-      (-sec3.getBoundingClientRect().top + window.innerHeight) / 2
+      (-sec2_5.getBoundingClientRect().top + window.innerHeight) / 2
     }px)`;
-  } else if (sec3.getBoundingClientRect().top - window.innerHeight > 0) {
+  } else if (sec2_5.getBoundingClientRect().top - window.innerHeight > 0) {
     sec2.style = ``;
   }
 
@@ -265,6 +398,30 @@ function render() {
   ) {
     sec3LeftSide.style.transform = `translateY(${
       sec3.getBoundingClientRect().height - window.innerHeight
+    }px)`;
+  }
+
+  // sec 4
+  if (
+    sec4.getBoundingClientRect().top <= 0 &&
+    sec4.getBoundingClientRect().top +
+      sec4.getBoundingClientRect().height -
+      window.innerHeight >
+      0
+  ) {
+    sec4LeftSide.style.transition = `none`;
+    sec4LeftSide.style.transform = `translateY(${-sec4.getBoundingClientRect()
+      .top}px)`;
+  } else if (sec4.getBoundingClientRect().top > 0) {
+    sec4LeftSide.style = ``;
+  } else if (
+    sec4.getBoundingClientRect().top +
+      sec4.getBoundingClientRect().height -
+      window.innerHeight <
+    0
+  ) {
+    sec4LeftSide.style.transform = `translateY(${
+      sec4.getBoundingClientRect().height - window.innerHeight
     }px)`;
   }
 
