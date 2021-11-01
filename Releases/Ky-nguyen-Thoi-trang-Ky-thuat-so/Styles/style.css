@@ -1669,17 +1669,35 @@ p {
 }
 
 #sec4 .Shopping_Illus {
-  background-image: url(../Vectors/ShopingIllus.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   aspect-ratio: calc(422 / 400);
+  position: relative;
   margin-bottom: 50px;
   margin-top: 10vh;
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
   transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
   position: relative;
+}
+
+#sec4 .Shopping_Illus svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#sec4 .Shopping_Illus svg * {
+  -webkit-transition: all 0.11s ease-out;
+  transition: all 0.11s ease-out;
+}
+
+#sec4 .Shopping_Illus svg #Refl_Mask,
+#sec4 .Shopping_Illus svg #clip-path {
+  -webkit-transition: none;
+  transition: none;
 }
 
 #sec4 .Shopping_Illus #Shopping_Illus_text {

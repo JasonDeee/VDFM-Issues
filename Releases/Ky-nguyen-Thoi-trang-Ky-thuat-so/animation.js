@@ -52,6 +52,24 @@ const Sec4TitleR = document.querySelector("#sec4 .Sec4_title");
 const Sec4TitleL = document.querySelector("#sec4 .Main_Title");
 const AltCursor = document.querySelector(".Free_Circle_Cursor");
 
+// Shopping Illustration Animate
+const Shopping_Illus = document.querySelector("#sec4 .Shopping_Illus");
+const Shopping_Illus_MidPoint =
+  Shopping_Illus.getBoundingClientRect().left +
+  Shopping_Illus.getBoundingClientRect().width / 2;
+const Refl_Char = document.querySelector(
+    "#sec4 .Shopping_Illus svg #Refl_Char"
+  ),
+  Refl_Mask = document.querySelector("#sec4 .Shopping_Illus svg #clip-path"),
+  Tree = document.querySelector("#sec4 .Shopping_Illus svg #Tree"),
+  Char = document.querySelector("#sec4 .Shopping_Illus svg #RealChar"),
+  Box = document.querySelector("#sec4 .Shopping_Illus svg #Box"),
+  Paticle = document.querySelector("#sec4 .Shopping_Illus svg #Paticle"),
+  Mirror = document.querySelector("#sec4 .Shopping_Illus svg #Mirror"),
+  White_Matte = document.querySelector(
+    "#sec4 .Shopping_Illus svg #White_Matte"
+  );
+
 function TitleAnimateSec4() {
   var Sec4Time = setTimeout(() => {
     // Trigger On 75% Windows Height
@@ -274,7 +292,45 @@ function TitleAnimateSec3() {
     clearTimeout(Sec3Time);
   }, 700);
 }
-//
+// Sec 4
+
+function Shopping_IllusAnimation(e) {
+  console.log(e.pageX - Shopping_Illus_MidPoint);
+  //
+  // Font side
+  Char.style.transform = `translateX(${
+    (e.pageX - Shopping_Illus_MidPoint) / 15
+  }px)`;
+  Tree.style.transform = `translateX(${
+    (e.pageX - Shopping_Illus_MidPoint) / 30
+  }px)`;
+
+  //
+  // Mid Side
+  Refl_Mask.style.transform = `translateX(${
+    -(e.pageX - Shopping_Illus_MidPoint) / 20
+  }px)`;
+  White_Matte.style.transform = `translateX(${
+    -(e.pageX - Shopping_Illus_MidPoint) / 20
+  }px)`;
+  Mirror.style.transform = `translateX(${
+    -(e.pageX - Shopping_Illus_MidPoint) / 20
+  }px)`;
+
+  // Refl
+  Refl_Char.style.transform = `translateX(${
+    -(e.pageX - Shopping_Illus_MidPoint) / 9
+  }px)`;
+
+  // BackGround Side
+  Box.style.transform = `translateX(${
+    -(e.pageX - Shopping_Illus_MidPoint) / 8
+  }px)`;
+  Paticle.style.transform = `translateX(${
+    -(e.pageX - Shopping_Illus_MidPoint) / 6
+  }px)`;
+}
+Shopping_Illus.addEventListener("mousemove", Shopping_IllusAnimation);
 
 // Title Animation In sec4
 
