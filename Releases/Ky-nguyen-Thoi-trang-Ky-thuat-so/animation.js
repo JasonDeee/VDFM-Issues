@@ -36,6 +36,13 @@ const sec3LeftSide = document.querySelector("#sec3 #left_col");
 const TitleContent_L = document.querySelector("#sec3 #left_col .contents");
 const TitleContent_R = document.querySelector("#sec3 .Sec3_Title");
 
+const Anh4_Layout = document.querySelector("#sec3 .Anh4_Layout");
+const layer3 = document.querySelector("#sec3 .Anh4_Layout .layer3");
+const layer2 = document.querySelector("#sec3 .Anh4_Layout .layer2");
+const layer1 = document.querySelector("#sec3 .Anh4_Layout .layer1");
+const group1 = document.querySelector("#sec3 .Anh4_Layout .group1");
+layer3.style.transform = `translateY(${-window.innerHeight / 10}px)`;
+
 // Sec 4
 const sec4 = document.querySelector("#sec4");
 const sec4LeftSide = document.querySelector("#sec4 #left_col");
@@ -422,6 +429,27 @@ function render() {
   ) {
     sec4LeftSide.style.transform = `translateY(${
       sec4.getBoundingClientRect().height - window.innerHeight
+    }px)`;
+  }
+
+  // Sec3 Countỏur 2020
+  if (
+    Anh4_Layout.getBoundingClientRect().top <= window.innerHeight &&
+    Anh4_Layout.getBoundingClientRect().top +
+      Anh4_Layout.getBoundingClientRect().height >=
+      0
+  ) {
+    group1.style.transform = `translateY(${
+      Anh4_Layout.getBoundingClientRect().top / 5
+    }px)`;
+    layer1.style.transform = `translateY(${
+      Anh4_Layout.getBoundingClientRect().top / 5
+    }px)`;
+    layer2.style.transform = `translateY(${
+      Anh4_Layout.getBoundingClientRect().top / 16
+    }px)`;
+    layer3.style.transform = `translateY(${
+      -Anh4_Layout.getBoundingClientRect().top / 10
     }px)`;
   }
 
