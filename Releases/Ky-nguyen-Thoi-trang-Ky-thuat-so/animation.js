@@ -295,7 +295,6 @@ function TitleAnimateSec3() {
 // Sec 4
 
 function Shopping_IllusAnimation(e) {
-  console.log(e.pageX - Shopping_Illus_MidPoint);
   //
   // Font side
   Char.style.transform = `translateX(${

@@ -1362,8 +1362,24 @@ p {
       height: 100%;
       flex: auto;
       width: auto;
+      position: relative;
       // border: solid 3px #e9e7e7;
       z-index: 1;
+    }
+    .NOA_IMG::after {
+      background: #0e4e31;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: "";
+      mix-blend-mode: color;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+    }
+    .NOA_IMG:hover::after {
+      opacity: 1;
     }
 
     #IMG1 {
