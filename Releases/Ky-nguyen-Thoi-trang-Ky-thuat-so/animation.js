@@ -9,7 +9,7 @@ const return_button = document.querySelector(".return_button");
 
 // Section 1
 const main_pic = document.querySelector(".main_pic"); // Secondary Title - i Guessssss :)
-const main_picH1 = document.querySelector(".main_pic h1"); // Secondary Title - i Guessssss :)
+// const main_picH1 = document.querySelector(".main_pic h1"); // Secondary Title - i Guessssss :)
 
 const title = document.querySelector("#title");
 
@@ -53,7 +53,7 @@ function TitleAnimateSec4() {
         Sec4TitleR.getBoundingClientRect().height <
       0
     ) {
-      BlurImage.style.filter = `blur(1vw) saturate(0)`;
+      BlurImage.style.filter = `blur(1vw) saturate(0)  brightness(60%)`;
       Sec4TitleL.classList.add("Main_Title_Active");
     } else {
       BlurImage.style = ``;
@@ -343,7 +343,7 @@ function render() {
     main_pic.style.backgroundPositionY = `${
       -10 + (150 * dy) / side_pic[0].getBoundingClientRect().height
     }%`;
-    main_picH1.style.transform = `translateY(${dy / 150}px)`;
+    // main_picH1.style.transform = `translateY(${dy / 50}px)`;
 
     //
     // Side Picture

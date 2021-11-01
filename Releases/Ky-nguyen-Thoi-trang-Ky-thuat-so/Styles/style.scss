@@ -360,7 +360,7 @@ p {
   .line {
     height: 3px;
     width: 0;
-    background: #151515;
+    background: #e9e7e7;
     margin-bottom: 2vh;
     transition: all 2s cubic-bezier(0.25, 0, 0, 1);
   }
@@ -728,12 +728,16 @@ p {
       align-items: center;
       justify-content: flex-end;
       width: 100%;
+      height: 35vw;
+
       position: relative;
       margin-bottom: 10vh;
 
       .Invert_text {
-        color: #151515;
+        color: #e9e7e7;
         text-align: left;
+        font-size: 1vw;
+        font-weight: 400;
       }
       .Invert_text::first-letter {
         padding-left: 5px;
@@ -742,21 +746,45 @@ p {
         margin-right: 5px;
         font-weight: 800;
         letter-spacing: 5px;
-        background: #292929;
-        color: #e9e7e7;
+        background: #e9e7e7;
+        color: #151515;
         line-height: 5vw;
       }
       .Row_content {
         position: absolute;
-        width: calc(51vw - 53vh);
+        width: 62%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
         top: 0;
         left: 0;
+        padding: 20px 0 0 20px;
+
+        h5 {
+          color: #e9e7e7;
+          margin-bottom: 20px;
+        }
+        p {
+          position: relative;
+        }
+        p::after {
+          content: "";
+          width: 62%;
+          height: 3px;
+          background: #e9e7e7;
+          position: absolute;
+
+          bottom: -20px;
+          left: 0;
+        }
       }
 
       .single_Dash {
-        bottom: 5vh;
-        left: -13vw;
-
+        background: #e9e7e7;
+        position: relative;
+        margin-left: 50px;
         height: 3px;
         width: 16vw;
       }
@@ -775,14 +803,16 @@ p {
       }
     }
     .IMG {
-      height: 68vh;
+      height: 100%;
+      width: 100%;
       background: #f1f1f1;
       background-image: url("../Images/key.jpg");
       background-size: cover;
-      background-position: center;
-      aspect-ratio: calc(6 / 9);
+      background-position: 10% 50%;
       opacity: 0.88;
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
     .Holder {
       position: relative;
@@ -861,7 +891,7 @@ p {
     height: 100%;
     position: absolute;
     top: 0;
-    background: #292929;
+    background: #1d2635;
   }
 
   .Anh4_Layout {
@@ -883,21 +913,21 @@ p {
     .layer3 {
       width: 66%;
       aspect-ratio: calc(640 / 894);
-      background-image: url("https://www.dandolondon.com/media/collections/7br6iobzy.jpg");
+      background-image: url("../Images/Layer1.png.jpg");
       left: 0;
       top: 0;
     }
     .layer2 {
       width: 50%;
       aspect-ratio: calc(500 / 698);
-      background-image: url("https://www.dandolondon.com/media/collections/1744k9k7d.jpg");
+      background-image: url("../Images/Layer2.png.jpg");
       right: 0;
       top: 5vw;
     }
     .layer1 {
       width: 50%;
       aspect-ratio: calc(466 / 652);
-      background-image: url("https://www.dandolondon.com/media/collections/m9s5r6pyx.jpg");
+      background-image: url("../Images/Layer1.png.jpg");
       left: 12vw;
       bottom: 1vw;
     }
@@ -998,14 +1028,14 @@ p {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: url("../Images/ảnh-1.jpg");
+      background-image: url("../Images/ảnh12.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
     }
     #Blured {
-      filter: blur(0.5vw);
+      filter: blur(0);
     }
     #Origin {
       clip-path: circle(0 at 50% 50%);
@@ -1054,12 +1084,12 @@ p {
         transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
       }
       #Stroke_Shape {
-        border: solid 1px #292929;
+        border: solid 1px #22b573;
         transform: rotate(0);
       }
 
       #Fill_Shape {
-        background: #292929;
+        background: #22b573;
         transform: rotate(45deg);
       }
     }
@@ -1092,6 +1122,7 @@ p {
       span {
         display: inline-block;
         position: relative;
+        color: #22b573;
       }
     }
     br {
@@ -1188,11 +1219,12 @@ p {
         font-weight: 400;
         margin-bottom: 1vw;
       }
-      #Text3 {
+      #Text3,
+      #Text4 {
         font-size: 3.3vw;
         font-weight: 300;
         position: absolute;
-        bottom: calc(2.2vw + 6px);
+        bottom: -2vw;
         left: 2.8vw;
       }
       #Text4 {
@@ -1200,10 +1232,11 @@ p {
         background: #292929;
         color: #e9e7e7;
         padding: 5px 15px 5px 12px;
+        left: 7vw;
 
         font-size: 2.2vw;
         font-weight: 700;
-        clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+        clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
       }
       .single_Dash,
       .single_Dash2 {
@@ -1214,8 +1247,8 @@ p {
         width: 23vw;
       }
       .single_Dash2 {
-        left: 23vw;
-        width: 11vw;
+        left: 28vw;
+        width: 3vw;
 
         top: unset;
         bottom: -5vh;
@@ -1256,24 +1289,84 @@ p {
       left: 0;
       top: -10vh;
       font-weight: 400;
-      color: #e9e7e7;
+      color: white;
       padding: 10px 15px 10px 15px;
       background: #00000096;
       transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
     }
   }
-  #NOA_RAVID {
+  .NOA_RAVID {
     display: flex;
-    height: 50vh;
+    height: 68vh;
     width: 100%;
+    position: relative;
 
     align-items: flex-start;
+    justify-content: stretch;
+    gap: 10px;
+    margin: 100px 0 100px 0;
+
+    h6 {
+      position: absolute;
+      color: #22b573;
+      font-size: 3.3vw;
+      text-transform: uppercase;
+      font-family: "Barlow Condensed", sans-serif;
+      bottom: -30px;
+      left: 20px;
+      z-index: 2;
+
+      span {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.3vw;
+        display: inline-block;
+        position: absolute;
+        width: fit-content;
+        left: 0;
+        bottom: -1.3vw;
+      }
+    }
 
     .NOA_IMG {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      height: 100%;
+      flex: auto;
+      width: auto;
+      // border: solid 3px #e9e7e7;
+      z-index: 1;
     }
+
+    #IMG1 {
+      background-image: url("https://parametric-architecture.com/wp-content/uploads/2020/01/PA_noa-raviv-graduate-collection_03.jpg");
+    }
+    #IMG2 {
+      margin-top: 40px;
+      background-image: url("https://www.savoirflair.com/wp-content/uploads/2016/03/Noa-Raviv-Hard-Copy-Collection.jpg?x88026");
+    }
+    #IMG3 {
+      margin-top: 20px;
+      background-image: url("https://images.squarespace-cdn.com/content/v1/5a6115486f4ca3ee5ede0cd1/1521836882853-XZEXANO1B402NK393HVU/noa+raviv+graduate+collection_highres.jpg?format=1000w");
+    }
+  }
+  .NOA_RAVID::before,
+  .NOA_RAVID::after {
+    content: "";
+    width: auto;
+    height: 100px;
+    position: absolute;
+    bottom: -60px;
+    background: #292929;
+    z-index: 0;
+    left: -20px;
+    right: -20px;
+  }
+  .NOA_RAVID::after {
+    bottom: unset;
+    top: -40px;
   }
 }
 #Footer {
@@ -1292,4 +1385,65 @@ p {
   opacity: 0;
 
   transition: all 0s linear, opacity 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+#Sec5 {
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h3,
+  h4,
+  strong {
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    color: #292929;
+    letter-spacing: 0.2vw;
+    line-height: 1.8vw;
+  }
+  h4 {
+    margin-top: 20px;
+    font-weight: 300;
+    color: #656565;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+  strong {
+    font-weight: 700;
+  }
+  span {
+    color: #656565;
+    padding: 0 5px 0 5px;
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+
+    margin-top: 5vh;
+    div {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 8vw;
+      height: 10vh;
+    }
+    .horr_line {
+      height: auto;
+      width: 1px;
+      background: #292929;
+    }
+    #VDFM {
+      background-image: url(../Vectors/VDFM.svg);
+    }
+    #MAD_THC {
+      background-image: url(../Vectors/MADTHC.svg);
+    }
+  }
 }
