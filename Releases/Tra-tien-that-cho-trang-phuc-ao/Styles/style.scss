@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  transition: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  transition: width 0.5s ease-out;
+  transform: translateX(5px);
+}
+::-webkit-scrollbar:hover {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #e9e7e756;
+}
+::-webkit-scrollbar-thumb {
+  background: #151515;
+}
+
+::selection {
+  background: #c9c7c7;
+  color: #292929;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+section,
+div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section {
+  position: relative;
+  width: 100vw;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  h2 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  p,
+  ul {
+    width: 90vw;
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+  }
+  ul {
+    margin-left: 5vw;
+  }
+  div {
+    width: 100%;
+  }
+}
+
+#header {
+  background-image: url("../Images/header.png");
+  aspect-ratio: calc(1920 / 1005);
+}
+#heading1 {
+  background-image: url("../Images/tieu-de1.png");
+  aspect-ratio: calc(1920 / 448);
+}
+#Graphic1 {
+  background-image: url("../Images/graphic1.png");
+  aspect-ratio: calc(1920 / 1279);
+}
+#graphic2 {
+  background-image: url("../Images/graphic2.png");
+  aspect-ratio: calc(1920 / 1071);
+}
+#heading2 {
+  background-image: url("../Images/tieu-de2.png");
+  aspect-ratio: calc(1920 / 448);
+}
+#graphic3 {
+  background-image: url("../Images/graphic3.png");
+  aspect-ratio: calc(1920 / 1042);
+}
+#graphic4 {
+  background-image: url("../Images/graphic4.png");
+  aspect-ratio: calc(2400 / 1250);
+}
+#graphic5 {
+  background-image: url("../Images/graphic5.png");
+  aspect-ratio: calc(1920 / 900);
+}
+#heading3 {
+  background-image: url("../Images/tieu-de3.png");
+  aspect-ratio: calc(1920 / 448);
+}
+#graphic6 {
+  background-image: url("../Images/graphic6.png");
+  aspect-ratio: calc(1920 / 780);
+}
+#footer {
+  margin-top: 50vh;
+  background: #292929;
+}
