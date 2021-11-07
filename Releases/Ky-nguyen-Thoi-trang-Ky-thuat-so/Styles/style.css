@@ -1167,8 +1167,8 @@ p {
   font-weight: 700;
   mix-blend-mode: difference;
   color: white;
-  -webkit-transform: translateX(-13.5vw);
-          transform: translateX(-13.5vw);
+  -webkit-transform: translateX(-14.4vw);
+          transform: translateX(-14.4vw);
   font-family: "Barlow Condensed", sans-serif;
 }
 
