@@ -54,7 +54,7 @@ p {
 
 .return_button {
   width: 3.5vw;
-  aspect-ratio: 1;
+  height: 3.5vw;
   display: flex;
   position: fixed;
   background: #151515;
@@ -297,7 +297,7 @@ p {
 
       div {
         width: 2vw;
-        aspect-ratio: 1;
+        height: 2vw;
         border-radius: 50%;
         background: #e9e7e7;
       }
@@ -752,16 +752,17 @@ p {
         padding-left: 5px;
         font-size: 3.8vw;
         float: left;
+        margin-top: 0.5vw;
         margin-right: 5px;
         font-weight: 800;
         letter-spacing: 5px;
         background: #e9e7e7;
         color: #151515;
-        line-height: 5vw;
+        line-height: 5.5vw;
       }
       .Row_content {
         position: absolute;
-        width: 62%;
+        width: 65%;
         height: 80%;
         display: flex;
         flex-direction: column;
@@ -904,7 +905,7 @@ p {
   }
 
   .Anh4_Layout {
-    width: 100%;
+    width: 49vw;
     height: 60vw;
     display: flex;
     position: relative;
@@ -922,40 +923,43 @@ p {
     }
     .layer3 {
       width: 66%;
-      aspect-ratio: calc(640 / 894);
+      height: calc(49vw * 59004 / 64000);
       background-image: url("../Images/Layer3.png.jpg");
       left: 0;
       top: 0;
     }
     .layer2 {
       width: 50%;
-      aspect-ratio: calc(500 / 698);
+      height: calc(49vw * 34900 / 50000);
+
       background-image: url("../Images/Layer2.png.jpg");
       right: 0;
       top: 10vw;
     }
     .layer1 {
       width: 50%;
-      aspect-ratio: calc(466 / 652);
+      height: calc(49vw * 32600 / 46600);
+
       background-image: url("../Images/Layer1.png.jpg");
       left: 12vw;
       bottom: 1vw;
-    }
-    .group1 {
-      width: 47%;
-      border: none;
-      box-shadow: none;
-      background-image: url(../Images/Group1.png);
-      aspect-ratio: calc(989 / 356);
-      right: 0;
-      bottom: 0;
-      .single_Dash {
-        height: 3px;
+      span {
+        content: "";
+        position: absolute;
+        width: calc(49vw * 47 / 100);
+        background-image: url("../Images/Group1.png");
+        height: 10vw;
+        right: -10vw;
+        display: block;
+        bottom: -2vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }
   .Quotes_Layout {
-    width: 100%;
+    width: 100%; // ~ 49vw
     position: relative;
     display: flex;
     align-items: center;
@@ -967,14 +971,15 @@ p {
       background-image: url(../Vectors/DinkWater.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      aspect-ratio: 1;
+      // aspect-ratio: 1;
 
       position: absolute;
 
       top: 0;
       left: -2vw;
 
-      width: 43%;
+      width: calc(48vw * 43 / 100);
+      height: calc(48vw * 43 / 100);
     }
     #Right {
       width: auto;
@@ -990,7 +995,8 @@ p {
       background-image: url(../Vectors/Quotes_Illus.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      aspect-ratio: calc(163 / 66);
+      // aspect-ratio: calc(163 / 66);
+      height: calc(9vw * 66 / 163);
       width: 9vw;
       margin-bottom: 50px;
     }
@@ -1056,7 +1062,7 @@ p {
 
     .Main_Title {
       width: 12vw;
-      aspect-ratio: 1;
+      height: 12vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1117,7 +1123,7 @@ p {
     padding-left: 5vw;
     padding-right: 8vw;
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    // padding-bottom: 10vh;
     position: relative;
 
     p {
@@ -1244,6 +1250,7 @@ p {
         color: #e9e7e7;
         padding: 5px 15px 5px 12px;
         left: 7vw;
+        white-space: nowrap;
 
         font-size: 2.2vw;
         font-weight: 700;
@@ -1287,33 +1294,70 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
-    aspect-ratio: calc(422 / 400);
+    width: 49vw;
+    height: calc(49vw * 1367 / 2048);
+    // aspect-ratio: calc(2048 / 1367);
     position: relative;
     margin-bottom: 50px;
-    margin-top: 10vh;
+    margin-top: 13vh;
     transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+    * {
+      transition: all 0.11s ease-out;
+    }
 
-    svg {
+    div {
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .DepthBackGround {
+      width: 100%;
+      height: 100%;
+      background: #c9c7c7;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Character {
+      background-image: url("../Images/DeptPic/future.png");
+      width: 49vw;
+      height: calc(49vw * 1367 / 2048);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      filter: blur(2px);
+
+      // aspect-ratio: calc(2048/1367);
+    }
+    .Phone {
+      background-image: url("../Images/DeptPic/phone.png");
+      width: 49vw;
+      height: 68%;
+      // aspect-ratio: calc(2432 / 1163);
+
+      bottom: 0;
+    }
+
+    canvas {
       position: absolute;
       width: 100%;
       height: 100%;
       overflow: visible;
-      * {
-        transition: all 0.11s ease-out;
-      }
-      #Refl_Mask,
-      #clip-path {
-        transition: none;
-      }
+      filter: blur(2px);
     }
 
     position: relative;
     #Shopping_Illus_text {
       width: 62%;
       position: absolute;
-      left: 0;
-      top: -10vh;
+      left: 20px;
+      top: -13vh;
       font-weight: 400;
       color: white;
       padding: 10px 15px 10px 15px;
@@ -1417,7 +1461,7 @@ p {
 }
 .Free_Circle_Cursor {
   width: 20vw;
-  aspect-ratio: 1;
+  height: 20vw;
   border: solid 1px #151515;
   position: fixed;
   top: 30px;
@@ -1488,4 +1532,21 @@ p {
       background-image: url(../Vectors/MADTHC.svg);
     }
   }
+}
+#NoaRavid_Quote {
+  padding-left: 13vw;
+  font-style: italic;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#NoaRavid_Quote::before {
+  content: "";
+  background: #696969;
+  width: 3px;
+  height: 98%;
+  position: absolute;
+  display: inline-block;
+  left: 10vw;
 }

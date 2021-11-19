@@ -64,7 +64,7 @@ p {
 
 .return_button {
   width: 3.5vw;
-  aspect-ratio: 1;
+  height: 3.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +416,7 @@ p {
 
 .header_pic .side_pic #circle div {
   width: 2vw;
-  aspect-ratio: 1;
+  height: 2vw;
   border-radius: 50%;
   background: #e9e7e7;
 }
@@ -1017,17 +1017,18 @@ p {
   padding-left: 5px;
   font-size: 3.8vw;
   float: left;
+  margin-top: 0.5vw;
   margin-right: 5px;
   font-weight: 800;
   letter-spacing: 5px;
   background: #e9e7e7;
   color: #151515;
-  line-height: 5vw;
+  line-height: 5.5vw;
 }
 
 #sec3 #right_col .Row .Row_content {
   position: absolute;
-  width: 62%;
+  width: 65%;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1167,8 +1168,8 @@ p {
   font-weight: 700;
   mix-blend-mode: difference;
   color: white;
-  -webkit-transform: translateX(-14.4vw);
-          transform: translateX(-14.4vw);
+  -webkit-transform: translateX(-13.5vw);
+          transform: translateX(-13.5vw);
   font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -1186,7 +1187,7 @@ p {
 }
 
 #sec3 .Anh4_Layout {
-  width: 100%;
+  width: 49vw;
   height: 60vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1208,7 +1209,7 @@ p {
 
 #sec3 .Anh4_Layout .layer3 {
   width: 66%;
-  aspect-ratio: calc(640 / 894);
+  height: calc(49vw * 59004 / 64000);
   background-image: url("../Images/Layer3.png.jpg");
   left: 0;
   top: 0;
@@ -1216,7 +1217,7 @@ p {
 
 #sec3 .Anh4_Layout .layer2 {
   width: 50%;
-  aspect-ratio: calc(500 / 698);
+  height: calc(49vw * 34900 / 50000);
   background-image: url("../Images/Layer2.png.jpg");
   right: 0;
   top: 10vw;
@@ -1224,25 +1225,24 @@ p {
 
 #sec3 .Anh4_Layout .layer1 {
   width: 50%;
-  aspect-ratio: calc(466 / 652);
+  height: calc(49vw * 32600 / 46600);
   background-image: url("../Images/Layer1.png.jpg");
   left: 12vw;
   bottom: 1vw;
 }
 
-#sec3 .Anh4_Layout .group1 {
-  width: 47%;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-image: url(../Images/Group1.png);
-  aspect-ratio: calc(989 / 356);
-  right: 0;
-  bottom: 0;
-}
-
-#sec3 .Anh4_Layout .group1 .single_Dash {
-  height: 3px;
+#sec3 .Anh4_Layout .layer1 span {
+  content: "";
+  position: absolute;
+  width: calc(49vw * 47 / 100);
+  background-image: url("../Images/Group1.png");
+  height: 10vw;
+  right: -10vw;
+  display: block;
+  bottom: -2vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #sec3 .Quotes_Layout {
@@ -1265,11 +1265,11 @@ p {
   background-image: url(../Vectors/DinkWater.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  aspect-ratio: 1;
   position: absolute;
   top: 0;
   left: -2vw;
-  width: 43%;
+  width: calc(48vw * 43 / 100);
+  height: calc(48vw * 43 / 100);
 }
 
 #sec3 .Quotes_Layout #Right {
@@ -1291,7 +1291,7 @@ p {
   background-image: url(../Vectors/Quotes_Illus.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  aspect-ratio: calc(163 / 66);
+  height: calc(9vw * 66 / 163);
   width: 9vw;
   margin-bottom: 50px;
 }
@@ -1379,7 +1379,7 @@ p {
 
 #sec4 #left_col .Main_Title {
   width: 12vw;
-  aspect-ratio: 1;
+  height: 12vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1468,7 +1468,6 @@ p {
   padding-left: 5vw;
   padding-right: 8vw;
   padding-top: 10vh;
-  padding-bottom: 10vh;
   position: relative;
 }
 
@@ -1629,6 +1628,7 @@ p {
   color: #e9e7e7;
   padding: 5px 15px 5px 12px;
   left: 7vw;
+  white-space: nowrap;
   font-size: 2.2vw;
   font-weight: 700;
   -webkit-clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
@@ -1672,39 +1672,81 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
-  aspect-ratio: calc(422 / 400);
+  width: 49vw;
+  height: calc(49vw * 1367 / 2048);
   position: relative;
   margin-bottom: 50px;
-  margin-top: 10vh;
+  margin-top: 13vh;
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
   transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
   position: relative;
 }
 
-#sec4 .Shopping_Illus svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-#sec4 .Shopping_Illus svg * {
+#sec4 .Shopping_Illus * {
   -webkit-transition: all 0.11s ease-out;
   transition: all 0.11s ease-out;
 }
 
-#sec4 .Shopping_Illus svg #Refl_Mask,
-#sec4 .Shopping_Illus svg #clip-path {
-  -webkit-transition: none;
-  transition: none;
+#sec4 .Shopping_Illus div {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#sec4 .Shopping_Illus .DepthBackGround {
+  width: 100%;
+  height: 100%;
+  background: #c9c7c7;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#sec4 .Shopping_Illus .Character {
+  background-image: url("../Images/DeptPic/future.png");
+  width: 49vw;
+  height: calc(49vw * 1367 / 2048);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+#sec4 .Shopping_Illus .Phone {
+  background-image: url("../Images/DeptPic/phone.png");
+  width: 49vw;
+  height: 68%;
+  bottom: 0;
+}
+
+#sec4 .Shopping_Illus canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 #sec4 .Shopping_Illus #Shopping_Illus_text {
   width: 62%;
   position: absolute;
-  left: 0;
-  top: -10vh;
+  left: 20px;
+  top: -13vh;
   font-weight: 400;
   color: white;
   padding: 10px 15px 10px 15px;
@@ -1825,7 +1867,7 @@ p {
 
 .Free_Circle_Cursor {
   width: 20vw;
-  aspect-ratio: 1;
+  height: 20vw;
   border: solid 1px #151515;
   position: fixed;
   top: 30px;
@@ -1923,5 +1965,30 @@ p {
 
 #Sec5 .logo #MAD_THC {
   background-image: url(../Vectors/MADTHC.svg);
+}
+
+#NoaRavid_Quote {
+  padding-left: 13vw;
+  font-style: italic;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#NoaRavid_Quote::before {
+  content: "";
+  background: #696969;
+  width: 3px;
+  height: 98%;
+  position: absolute;
+  display: inline-block;
+  left: 10vw;
 }
 /*# sourceMappingURL=style.css.map */

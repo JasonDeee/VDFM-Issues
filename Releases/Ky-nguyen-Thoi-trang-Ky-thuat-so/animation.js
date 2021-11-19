@@ -40,7 +40,6 @@ const Anh4_Layout = document.querySelector("#sec3 .Anh4_Layout");
 const layer3 = document.querySelector("#sec3 .Anh4_Layout .layer3");
 const layer2 = document.querySelector("#sec3 .Anh4_Layout .layer2");
 const layer1 = document.querySelector("#sec3 .Anh4_Layout .layer1");
-const group1 = document.querySelector("#sec3 .Anh4_Layout .group1");
 layer3.style.transform = `translateY(${-window.innerHeight / 10}px)`;
 
 // Sec 4
@@ -53,22 +52,6 @@ const Sec4TitleL = document.querySelector("#sec4 .Main_Title");
 const AltCursor = document.querySelector(".Free_Circle_Cursor");
 
 // Shopping Illustration Animate
-const Shopping_Illus = document.querySelector("#sec4 .Shopping_Illus");
-const Shopping_Illus_MidPoint =
-  Shopping_Illus.getBoundingClientRect().left +
-  Shopping_Illus.getBoundingClientRect().width / 2;
-const Refl_Char = document.querySelector(
-    "#sec4 .Shopping_Illus svg #Refl_Char"
-  ),
-  Refl_Mask = document.querySelector("#sec4 .Shopping_Illus svg #clip-path"),
-  Tree = document.querySelector("#sec4 .Shopping_Illus svg #Tree"),
-  Char = document.querySelector("#sec4 .Shopping_Illus svg #RealChar"),
-  Box = document.querySelector("#sec4 .Shopping_Illus svg #Box"),
-  Paticle = document.querySelector("#sec4 .Shopping_Illus svg #Paticle"),
-  Mirror = document.querySelector("#sec4 .Shopping_Illus svg #Mirror"),
-  White_Matte = document.querySelector(
-    "#sec4 .Shopping_Illus svg #White_Matte"
-  );
 
 function TitleAnimateSec4() {
   var Sec4Time = setTimeout(() => {
@@ -159,9 +142,10 @@ for (let index = 0; index < titleArray.length; index++) {
 
 const TitleSpan = document.querySelectorAll("#title span");
 const Titleline = document.querySelector(".header_contents .line");
-
+var TitleAnimateWait;
 function TitleAnimate() {
-  var TitleAnimateWait = setTimeout(() => {
+  clearTimeout(TitleAnimateWait);
+  TitleAnimateWait = setTimeout(() => {
     if (
       title.getBoundingClientRect().top +
         title.getBoundingClientRect().height * 1.2 -
@@ -211,30 +195,37 @@ for (let index = 0; index < Sec2titleArray.length; index++) {
 }
 
 const Sec2TitleSpan = document.querySelectorAll("#sec2_5 h2 span");
+const Sec2TitleAnimateFunc = () => {
+  if (
+    sec2_5_Content.getBoundingClientRect().top +
+      sec2_5_Content.getBoundingClientRect().height * 2.2 -
+      window.innerHeight <
+    0
+  ) {
+    Sec2TitleSpan.forEach((Element) => {
+      Element.classList.remove("sec2_pending");
+      // Element.style -= `transition:none`;
+    });
+  } else if (
+    sec2_5_Content.getBoundingClientRect().top -
+      sec2_5_Content.getBoundingClientRect().height * 0.05 -
+      window.innerHeight >
+    0
+  ) {
+    Sec2TitleSpan.forEach((Element) => {
+      Element.classList.add("sec2_pending");
+      // Element.style += `transition:none`;
+    });
+  }
+};
+var TitleAnimateWait2;
 
 function Sec2TitleAnimate() {
-  var TitleAnimateWait2 = setTimeout(() => {
-    if (
-      sec2_5_Content.getBoundingClientRect().top +
-        sec2_5_Content.getBoundingClientRect().height * 2.2 -
-        window.innerHeight <
-      0
-    ) {
-      Sec2TitleSpan.forEach((Element) => {
-        Element.classList.remove("sec2_pending");
-        // Element.style -= `transition:none`;
-      });
-    } else if (
-      sec2_5_Content.getBoundingClientRect().top -
-        sec2_5_Content.getBoundingClientRect().height * 0.05 -
-        window.innerHeight >
-      0
-    ) {
-      Sec2TitleSpan.forEach((Element) => {
-        Element.classList.add("sec2_pending");
-        // Element.style += `transition:none`;
-      });
-    }
+  clearTimeout(TitleAnimateWait2);
+  Sec2TitleAnimateFunc();
+
+  TitleAnimateWait2 = setTimeout(() => {
+    Sec2TitleAnimateFunc();
     clearTimeout(TitleAnimateWait2);
   }, 700);
 }
@@ -247,6 +238,7 @@ window.addEventListener("resize", (e) => {
 
     clearTimeout(resizetime);
   }, 1200);
+  CanvasUpdate();
 });
 
 //// SceneTitle Animate In - Sec 2
@@ -293,44 +285,58 @@ function TitleAnimateSec3() {
   }, 700);
 }
 // Sec 4
+//
 
-function Shopping_IllusAnimation(e) {
-  //
-  // Font side
-  Char.style.transform = `translateX(${
-    (e.pageX - Shopping_Illus_MidPoint) / 15
-  }px)`;
-  Tree.style.transform = `translateX(${
-    (e.pageX - Shopping_Illus_MidPoint) / 30
-  }px)`;
+// Sec4 Shopping_Illus
+const DepthBackGround = document.querySelector("#sec4 .DepthBackGround");
+const DepthPhone = document.querySelector("#sec4 .DepthBackGround .Phone");
+const DepthCharacter = document.querySelector(
+  "#sec4 .DepthBackGround .Character"
+);
 
-  //
-  // Mid Side
-  Refl_Mask.style.transform = `translateX(${
-    -(e.pageX - Shopping_Illus_MidPoint) / 20
-  }px)`;
-  White_Matte.style.transform = `translateX(${
-    -(e.pageX - Shopping_Illus_MidPoint) / 20
-  }px)`;
-  Mirror.style.transform = `translateX(${
-    -(e.pageX - Shopping_Illus_MidPoint) / 20
-  }px)`;
+var DepthCanvas = new PIXI.Application({
+  width: DepthBackGround.clientWidth,
+  height: DepthBackGround.clientHeight,
+});
+DepthBackGround.prepend(DepthCanvas.view);
 
-  // Refl
-  Refl_Char.style.transform = `translateX(${
-    -(e.pageX - Shopping_Illus_MidPoint) / 9
-  }px)`;
+let BackGroundIMG = new PIXI.Sprite.from("./Images/DeptPic/room.jpg");
+BackGroundIMG.width = DepthBackGround.clientWidth;
+BackGroundIMG.height = DepthBackGround.clientHeight;
+DepthCanvas.stage.addChild(BackGroundIMG);
 
-  // BackGround Side
-  Box.style.transform = `translateX(${
-    -(e.pageX - Shopping_Illus_MidPoint) / 8
-  }px)`;
-  Paticle.style.transform = `translateX(${
-    -(e.pageX - Shopping_Illus_MidPoint) / 6
-  }px)`;
-}
-Shopping_Illus.addEventListener("mousemove", Shopping_IllusAnimation);
+let depthMap = new PIXI.Sprite.from("./Images/DeptPic/depht.jpg");
+depthMap.width = DepthBackGround.clientWidth;
+depthMap.height = DepthBackGround.clientHeight;
 
+DepthCanvas.stage.addChild(depthMap);
+
+let displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+DepthCanvas.stage.filters = [displacementFilter];
+
+const CanvasUpdate = () => {
+  depthMap.width = DepthBackGround.clientWidth;
+  depthMap.height = DepthBackGround.clientHeight;
+
+  BackGroundIMG.width = DepthBackGround.clientWidth;
+  BackGroundIMG.height = DepthBackGround.clientHeight;
+};
+
+const Shopping_Illus_Ani = (e) => {
+  let OffsetX =
+    e.pageX -
+    DepthBackGround.getBoundingClientRect().left -
+    DepthBackGround.getBoundingClientRect().width / 2;
+
+  displacementFilter.scale.x = OffsetX / 5;
+  DepthPhone.style.transform = `translateX(${-OffsetX}px)`;
+  DepthCharacter.style.transform = `translateX(${-OffsetX / 20}px)`;
+};
+
+DepthBackGround.addEventListener("mousemove", Shopping_Illus_Ani);
+
+// ./Images/DeptPic/room.jpg
+//./Images/DeptPic/depht.jpg
 // Title Animation In sec4
 
 // Momentum Scrolling
@@ -494,9 +500,6 @@ function render() {
       Anh4_Layout.getBoundingClientRect().height >=
       0
   ) {
-    group1.style.transform = `translateY(${
-      Anh4_Layout.getBoundingClientRect().top / 5
-    }px)`;
     layer1.style.transform = `translateY(${
       Anh4_Layout.getBoundingClientRect().top / 5
     }px)`;
