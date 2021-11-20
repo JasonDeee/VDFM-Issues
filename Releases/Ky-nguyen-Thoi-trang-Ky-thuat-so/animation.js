@@ -100,12 +100,31 @@ function sec4MouseMove(e) {
 }
 //
 
-let sx = 0, // For scroll positions
+var sx = 0, // For scroll positions
   sy = 0;
-let dx = sx, // For container positions And Force (Percentage 70% Recommended)
+var dx = sx, // For container positions And Force (Percentage 70% Recommended)
   dy = sy,
   Force = 80;
 
+const wheelValidate = (e) => {
+  var isTouchPad = e.wheelDeltaY
+    ? e.wheelDeltaY === -3 * e.deltaY
+    : e.deltaMode === 0;
+
+  Force = isTouchPad ? 800 : 80;
+};
+
+const touch = () => {
+  Force = 800;
+};
+//
+
+window.addEventListener("wheel", wheelValidate);
+window.addEventListener("touchstart", touch);
+
+const li = (a, b, n) => {
+  return (1 - n) * a + n * b;
+};
 // Onpage Load And Refresh Events
 
 body.style.height = main.clientHeight + "px";
@@ -144,7 +163,7 @@ const TitleSpan = document.querySelectorAll("#title span");
 const Titleline = document.querySelector(".header_contents .line");
 var TitleAnimateWait;
 function TitleAnimate() {
-  clearTimeout(TitleAnimateWait);
+  // clearTimeout(TitleAnimateWait);
   TitleAnimateWait = setTimeout(() => {
     if (
       title.getBoundingClientRect().top +
@@ -172,7 +191,7 @@ function TitleAnimate() {
       });
     }
     clearTimeout(TitleAnimateWait);
-  }, 700);
+  }, 555);
 }
 
 //
@@ -230,21 +249,22 @@ function Sec2TitleAnimate() {
   }, 700);
 }
 
-window.addEventListener("resize", (e) => {
+window.addEventListener("resize", () => {
+  let bodyHeight = main.getBoundingClientRect().height;
+  body.style.height = `${bodyHeight}px`;
+
   var resizetime = setTimeout(() => {
-    let bodyHeight = main.getBoundingClientRect().height;
     body.style.height = `${bodyHeight}px`;
     easeScroll();
 
     clearTimeout(resizetime);
   }, 1200);
-  CanvasUpdate();
 });
 
 //// SceneTitle Animate In - Sec 2
-
+var Sec2Time;
 function SceneAnimate() {
-  var Sec2Time = setTimeout(() => {
+  Sec2Time = setTimeout(() => {
     // Trigger On 75% Windows Height
     if (
       main_block.getBoundingClientRect().top - window.innerHeight * 0.65 <
@@ -267,9 +287,9 @@ function SceneAnimate() {
 //
 
 // Title Animation In sec3
-
+var Sec3Time;
 function TitleAnimateSec3() {
-  var Sec3Time = setTimeout(() => {
+  Sec3Time = setTimeout(() => {
     // Trigger On 75% Windows Height
     if (
       TitleContent_R.getBoundingClientRect().top +
@@ -289,6 +309,7 @@ function TitleAnimateSec3() {
 
 // Sec4 Shopping_Illus
 const DepthBackGround = document.querySelector("#sec4 .DepthBackGround");
+const Shopping_Illus = document.querySelector("#sec4 .Shopping_Illus");
 const DepthPhone = document.querySelector("#sec4 .DepthBackGround .Phone");
 const DepthCharacter = document.querySelector(
   "#sec4 .DepthBackGround .Character"
@@ -300,27 +321,29 @@ var DepthCanvas = new PIXI.Application({
 });
 DepthBackGround.prepend(DepthCanvas.view);
 
-let BackGroundIMG = new PIXI.Sprite.from("./Images/DeptPic/room.jpg");
+var BackGroundIMG = new PIXI.Sprite.from("./Images/DeptPic/room.jpg");
 BackGroundIMG.width = DepthBackGround.clientWidth;
 BackGroundIMG.height = DepthBackGround.clientHeight;
 DepthCanvas.stage.addChild(BackGroundIMG);
 
-let depthMap = new PIXI.Sprite.from("./Images/DeptPic/depht.jpg");
+var depthMap = new PIXI.Sprite.from("./Images/DeptPic/depht.jpg");
 depthMap.width = DepthBackGround.clientWidth;
 depthMap.height = DepthBackGround.clientHeight;
 
 DepthCanvas.stage.addChild(depthMap);
 
-let displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+var displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
 DepthCanvas.stage.filters = [displacementFilter];
 
-const CanvasUpdate = () => {
-  depthMap.width = DepthBackGround.clientWidth;
-  depthMap.height = DepthBackGround.clientHeight;
+const TheDepthCanvas = document.querySelector("#sec4 .DepthBackGround canvas");
 
-  BackGroundIMG.width = DepthBackGround.clientWidth;
-  BackGroundIMG.height = DepthBackGround.clientHeight;
-};
+// const CanvasUpdate = () => {
+//   depthMap.width = DepthBackGround.getBoundingClientRect().width;
+//   depthMap.height = DepthBackGround.getBoundingClientRect().height;
+
+//   BackGroundIMG.width = DepthBackGround.getBoundingClientRect().width;
+//   BackGroundIMG.height = DepthBackGround.getBoundingClientRect().height;
+// };
 
 const Shopping_Illus_Ani = (e) => {
   let OffsetX =
@@ -328,12 +351,20 @@ const Shopping_Illus_Ani = (e) => {
     DepthBackGround.getBoundingClientRect().left -
     DepthBackGround.getBoundingClientRect().width / 2;
 
+  let PercentX = Math.abs(
+    OffsetX / (DepthBackGround.getBoundingClientRect().width / 2)
+  );
+
   displacementFilter.scale.x = OffsetX / 5;
-  DepthPhone.style.transform = `translateX(${-OffsetX}px)`;
-  DepthCharacter.style.transform = `translateX(${-OffsetX / 20}px)`;
+  DepthPhone.style.transform = `translateX(${-OffsetX * 1.15}px)`;
+  DepthCharacter.style.transform = `translateX(${-OffsetX / 15}px)`;
+
+  TheDepthCanvas.style.filter = `blur(${(1 - PercentX) * 3}px)`;
+  DepthCharacter.style.filter = `blur(${(1 - PercentX) * 3}px)`;
+  DepthPhone.style.filter = `blur(${PercentX * 6}px)`;
 };
 
-DepthBackGround.addEventListener("mousemove", Shopping_Illus_Ani);
+Shopping_Illus.addEventListener("mousemove", Shopping_Illus_Ani);
 
 // ./Images/DeptPic/room.jpg
 //./Images/DeptPic/depht.jpg
@@ -512,8 +543,4 @@ function render() {
   }
 
   window.requestAnimationFrame(render);
-}
-
-function li(a, b, n) {
-  return (1 - n) * a + n * b;
 }

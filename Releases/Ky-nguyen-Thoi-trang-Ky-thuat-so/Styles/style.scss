@@ -1289,6 +1289,26 @@ p {
       }
     }
   }
+  .Shopping_Illus::after {
+    content: "Virtual Clothes";
+    background: #22b573;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    padding: 5px 10px 5px 10px;
+    width: auto;
+    right: 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    color: white;
+
+    font-size: 0.9vw;
+    font-weight: 600;
+  }
   .Shopping_Illus {
     // background-image: url(../Vectors/ShopingIllus.svg);
     background-size: contain;
@@ -1302,7 +1322,7 @@ p {
     margin-top: 13vh;
     transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
     * {
-      transition: all 0.11s ease-out;
+      transition: all 0.08s ease-out;
     }
 
     div {
@@ -1316,13 +1336,21 @@ p {
       height: 100%;
       background: #c9c7c7;
       overflow: hidden;
+      position: relative;
 
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
     }
-
+    .DepthBackGround::after {
+      content: "";
+      background: #22b573;
+      height: 4px;
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+    }
     .Character {
       background-image: url("../Images/DeptPic/future.png");
       width: 49vw;
@@ -1409,6 +1437,14 @@ p {
       position: relative;
       // border: solid 3px #e9e7e7;
       z-index: 1;
+      transition: all 0.55s cubic-bezier(0.25, 0, 0, 1);
+    }
+    .NOA_IMG::before {
+      width: 100%;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
     .NOA_IMG::after {
       background: #0e4e31;
@@ -1425,7 +1461,9 @@ p {
     .NOA_IMG:hover::after {
       opacity: 1;
     }
-
+    .NOA_IMG:hover::before {
+      transform: translateY(99%);
+    }
     #IMG1 {
       background-image: url("https://parametric-architecture.com/wp-content/uploads/2020/01/PA_noa-raviv-graduate-collection_03.jpg");
     }
@@ -1437,7 +1475,25 @@ p {
       margin-top: 20px;
       background-image: url("https://images.squarespace-cdn.com/content/v1/5a6115486f4ca3ee5ede0cd1/1521836882853-XZEXANO1B402NK393HVU/noa+raviv+graduate+collection_highres.jpg?format=1000w");
     }
+    #IMG3::before {
+      height: 20px;
+    }
+    #IMG2::before {
+      height: 40px;
+    }
+    #IMG1::before {
+      height: 15px;
+    }
+
+    #IMG1:hover {
+      margin-top: -15px;
+    }
+    #IMG2:hover,
+    #IMG3:hover {
+      margin-top: 0;
+    }
   }
+
   .NOA_RAVID::before,
   .NOA_RAVID::after {
     content: "";
@@ -1543,10 +1599,17 @@ p {
 }
 #NoaRavid_Quote::before {
   content: "";
-  background: #696969;
-  width: 3px;
+  background-image: url(../Vectors/btf.svg);
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10vw;
   height: 98%;
   position: absolute;
   display: inline-block;
-  left: 10vw;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  @import "./mobile";
 }

@@ -1668,6 +1668,30 @@ p {
   width: 43px;
 }
 
+#sec4 .Shopping_Illus::after {
+  content: "Virtual Clothes";
+  background: #22b573;
+  height: 20px;
+  position: absolute;
+  bottom: -10px;
+  padding: 5px 10px 5px 10px;
+  width: auto;
+  right: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.9vw;
+  font-weight: 600;
+}
+
 #sec4 .Shopping_Illus {
   background-size: contain;
   background-repeat: no-repeat;
@@ -1683,8 +1707,8 @@ p {
 }
 
 #sec4 .Shopping_Illus * {
-  -webkit-transition: all 0.11s ease-out;
-  transition: all 0.11s ease-out;
+  -webkit-transition: all 0.08s ease-out;
+  transition: all 0.08s ease-out;
 }
 
 #sec4 .Shopping_Illus div {
@@ -1699,6 +1723,7 @@ p {
   height: 100%;
   background: #c9c7c7;
   overflow: hidden;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1712,6 +1737,15 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#sec4 .Shopping_Illus .DepthBackGround::after {
+  content: "";
+  background: #22b573;
+  height: 4px;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
 }
 
 #sec4 .Shopping_Illus .Character {
@@ -1808,6 +1842,16 @@ p {
   width: auto;
   position: relative;
   z-index: 1;
+  -webkit-transition: all 0.55s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.55s cubic-bezier(0.25, 0, 0, 1);
+}
+
+#sec4 .NOA_RAVID .NOA_IMG::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 #sec4 .NOA_RAVID .NOA_IMG::after {
@@ -1828,6 +1872,11 @@ p {
   opacity: 1;
 }
 
+#sec4 .NOA_RAVID .NOA_IMG:hover::before {
+  -webkit-transform: translateY(99%);
+          transform: translateY(99%);
+}
+
 #sec4 .NOA_RAVID #IMG1 {
   background-image: url("https://parametric-architecture.com/wp-content/uploads/2020/01/PA_noa-raviv-graduate-collection_03.jpg");
 }
@@ -1840,6 +1889,27 @@ p {
 #sec4 .NOA_RAVID #IMG3 {
   margin-top: 20px;
   background-image: url("https://images.squarespace-cdn.com/content/v1/5a6115486f4ca3ee5ede0cd1/1521836882853-XZEXANO1B402NK393HVU/noa+raviv+graduate+collection_highres.jpg?format=1000w");
+}
+
+#sec4 .NOA_RAVID #IMG3::before {
+  height: 20px;
+}
+
+#sec4 .NOA_RAVID #IMG2::before {
+  height: 40px;
+}
+
+#sec4 .NOA_RAVID #IMG1::before {
+  height: 15px;
+}
+
+#sec4 .NOA_RAVID #IMG1:hover {
+  margin-top: -15px;
+}
+
+#sec4 .NOA_RAVID #IMG2:hover,
+#sec4 .NOA_RAVID #IMG3:hover {
+  margin-top: 0;
 }
 
 #sec4 .NOA_RAVID::before,
@@ -1984,11 +2054,87 @@ p {
 
 #NoaRavid_Quote::before {
   content: "";
-  background: #696969;
-  width: 3px;
+  background-image: url(../Vectors/btf.svg);
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10vw;
   height: 98%;
   position: absolute;
   display: inline-block;
-  left: 10vw;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .return_button {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+  }
+  #main_scroll {
+    position: absolute;
+  }
+  #sec1 {
+    height: auto;
+  }
+  .top_header {
+    height: 60px;
+  }
+  .top_header h1 {
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .header_pic {
+    height: 100vh;
+  }
+  .header_pic .main_pic {
+    width: 100vw;
+    height: 100vh;
+    background-position-y: -10%;
+    background-size: cover;
+  }
+  .header_pic .main_pic h1 {
+    font-size: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    line-height: 2.8rem;
+  }
+  .header_pic .main_pic span {
+    font-size: 1.23rem;
+    line-height: 1.4rem;
+    -webkit-transform: none;
+            transform: none;
+    background: #e9e7e7;
+    color: #292929;
+  }
+  .header_pic .side_pic {
+    display: none;
+  }
+  .header_contents {
+    width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header_contents h1 {
+    font-size: 1.23rem;
+    line-height: 1.7rem;
+    max-width: 77vw;
+  }
+  .header_contents p {
+    font-size: 1.23rem;
+    line-height: 1.7rem;
+    position: absolute;
+    bottom: 0;
+    max-width: 80vw;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
