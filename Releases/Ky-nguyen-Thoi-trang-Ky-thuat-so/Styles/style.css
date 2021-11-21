@@ -2066,6 +2066,9 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  p {
+    font-size: 1.24rem;
+  }
   .return_button {
     width: 40px;
     height: 40px;
@@ -2093,7 +2096,7 @@ p {
   }
   .header_pic .main_pic {
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
     background-position-y: -10%;
     background-size: cover;
   }
@@ -2104,6 +2107,7 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     line-height: 2.8rem;
+    width: 500px;
   }
   .header_pic .main_pic span {
     font-size: 1.23rem;
@@ -2121,20 +2125,251 @@ p {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    position: relative;
+    margin-top: -20vh;
+    background: #151515;
   }
   .header_contents h1 {
     font-size: 1.23rem;
     line-height: 1.7rem;
     max-width: 77vw;
+    margin-top: -10vh;
+    z-index: 5;
   }
   .header_contents p {
     font-size: 1.23rem;
     line-height: 1.7rem;
-    position: absolute;
+    position: relative;
     bottom: 0;
     max-width: 80vw;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    z-index: 5;
+  }
+  .header_contents::after {
+    content: "";
+    background: -webkit-gradient(linear, left top, left bottom, from(#15151500), to(#151515));
+    background: linear-gradient(to bottom, #15151500, #151515);
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  #sec2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #sec2 .line {
+    height: 1px;
+    width: 62vw;
+    min-height: unset;
+    position: absolute;
+    top: 0;
+  }
+  #sec2 .row {
+    min-height: unset;
+    position: relative;
+  }
+  #sec2 #left {
+    width: 100vw;
+    padding: 20vh 5vw 0 5vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #sec2 .main_block {
+    width: 100%;
+  }
+  #sec2 .main_block h2 {
+    font-size: 4.5vw;
+    line-height: 5vw;
+    text-align: center;
+    width: 100%;
+  }
+  #sec2 .main_block #center h3 {
+    font-size: 4.5vw;
+  }
+  #sec2 .main_block #center {
+    margin: 10px 0 10px 0;
+  }
+  #sec2 .main_block .leftBlock {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #sec2 .main_block .leftBlock h2 {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #sec2 .main_block .BottomBlock {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    gap: 10px;
+  }
+  #sec2 .main_block h5 {
+    font-size: 3rem;
+  }
+  #sec2 .main_block .question {
+    width: 17vw;
+    height: 21vw;
+    -webkit-transform: none;
+            transform: none;
+  }
+  #sec2 .main_block .PI {
+    font-size: 2.23rem;
+  }
+  #sec2 .main_block .block_line {
+    width: 24vw;
+    margin-right: 12vw;
+    margin-bottom: 20px;
+  }
+  #sec2 .main_block #line2 {
+    margin-right: 0;
+  }
+  #sec2 .main_block .SceneBox {
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 10px;
+  }
+  #sec2 .main_block .SceneBox h5 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  #sec2 .main_block #line3 {
+    margin-bottom: 0;
+  }
+  #sec2 #right {
+    width: 100%;
+    padding-right: 5vw;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+  }
+  #sec2 #right p {
+    font-size: 1.24rem;
+    line-height: 1.7rem;
+  }
+  #sec2 #right .Consequence {
+    margin-top: 10px;
+  }
+  #sec2_5 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: unset;
+  }
+  #sec2_5 h2 {
+    margin: 0;
+  }
+  .arr-1 {
+    stroke-width: 50px;
+  }
+  #sec3 #left_col {
+    display: none;
+  }
+  #sec3 #right_col {
+    width: 100%;
+    padding-right: 5vw;
+  }
+  #sec3 #right_col h5 {
+    font-size: 1.24rem;
+  }
+  #sec3 #right_col p {
+    font-size: 1.24rem;
+    line-height: 1.5rem;
+  }
+  #sec3 #right_col .Row {
+    margin-left: -5vw;
+    margin-right: -5vw;
+    width: 100vw;
+    height: 150vh;
+  }
+  #sec3 #right_col .Row .IMG {
+    background-position-x: 30%;
+  }
+  #sec3 #right_col .Row .Row_content {
+    padding-left: 5vw;
+  }
+  #sec3 #right_col .Row .Invert_text {
+    font-size: 1.1rem;
+  }
+  #sec3 #right_col .Row .Invert_text::first-letter {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-right: 10px;
+    letter-spacing: 9px;
+  }
+  #sec3 #right_col .Sec3_Title h2 {
+    font-size: 8.79vw;
+    -webkit-transform: none;
+            transform: none;
+  }
+  #sec3 #right_col .Sec3_Title .single_Dash {
+    left: 0;
+  }
+  #sec3 #right_col .Sec3_Title .single_Dash span {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  #sec3 .Anh4_Layout {
+    width: 100%;
+    height: 120vw;
+    margin-top: 0;
+    margin-bottom: 10vh;
+  }
+  #sec3 .Anh4_Layout div {
+    -webkit-box-shadow: -20px 20px 25px #00000056;
+            box-shadow: -20px 20px 25px #00000056;
+  }
+  #sec3 .Anh4_Layout .layer3 {
+    height: calc(90vw * 59004 / 64000);
+  }
+  #sec3 .Anh4_Layout .layer2 {
+    height: calc(90vw * 34900 / 50000);
+  }
+  #sec3 .Anh4_Layout .layer1 {
+    height: calc(90vw * 32600 / 46600);
+    left: 15vw;
+  }
+  #sec3 .Anh4_Layout .layer1 span {
+    height: 19vw;
+    width: calc(90vw * 47 / 100);
+    bottom: -4vw;
+    left: 28vw;
+  }
+  #sec3 .Quotes_Layout .Avatar {
+    position: absolute;
+    left: unset;
+    width: 38vw;
+    height: 38vw;
+    top: -5vw;
+    right: 0;
+  }
+  #sec3 .Quotes_Layout #Right {
+    width: 100%;
+  }
+  #sec3 .Quotes_Layout #Quotes_Text {
+    font-size: 1.24rem;
+    line-height: 1.5rem;
+  }
+  #sec3 .Quotes_Layout .Quotes_Illus {
+    width: 38vw;
+    height: calc(38vw * 66 / 163);
+    margin-bottom: 30vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

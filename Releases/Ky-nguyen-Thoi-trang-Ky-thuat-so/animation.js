@@ -248,18 +248,22 @@ function Sec2TitleAnimate() {
     clearTimeout(TitleAnimateWait2);
   }, 700);
 }
-
-window.addEventListener("resize", () => {
-  let bodyHeight = main.getBoundingClientRect().height;
+var resizetime;
+const ScrollResize = () => {
+  let bodyHeight = Math.round(main.getBoundingClientRect().height);
   body.style.height = `${bodyHeight}px`;
+  clearTimeout(resizetime);
 
-  var resizetime = setTimeout(() => {
+  resizetime = setTimeout(() => {
+    bodyHeight = Math.round(main.getBoundingClientRect().height);
     body.style.height = `${bodyHeight}px`;
     easeScroll();
 
     clearTimeout(resizetime);
   }, 1200);
-});
+};
+
+window.addEventListener("resize", ScrollResize);
 
 //// SceneTitle Animate In - Sec 2
 var Sec2Time;
