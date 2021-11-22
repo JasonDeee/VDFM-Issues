@@ -306,3 +306,128 @@ p {
     }
   }
 }
+#sec2_5 {
+  background-image: url(../Vectors/Digital2.svg);
+  h2 {
+    display: none;
+  }
+}
+#sec4 {
+  // position: relative;
+  #left_col {
+    display: none;
+  }
+  #right_col {
+    width: 100%;
+
+    h5 {
+      font-size: 1.24rem;
+    }
+    p {
+      font-size: 1.24rem;
+      line-height: 1.5rem;
+    }
+
+    .Sec4_title {
+      .single_Dash {
+        left: 0;
+        span {
+          font-size: 1.1rem;
+          white-space: nowrap;
+        }
+      }
+
+      #Text1 {
+        transform: none;
+        font-size: 8.79vw;
+      }
+      #Text2 {
+        font-size: 5.63vw;
+        margin-bottom: 2vw;
+      }
+      #Text3 {
+        font-size: 8.79vw;
+        bottom: -10vw;
+      }
+      #Text4 {
+        font-size: 8.79vw;
+        bottom: calc(-10vw - 5px);
+        left: 15vw;
+      }
+    }
+
+    h3 {
+      position: relative;
+    }
+  }
+
+  .Shopping_Illus {
+    width: 100vw;
+    height: calc(100vw * 1367 / 2048);
+    margin-left: -5vw;
+    margin-right: -5vw;
+    margin-top: 20vh;
+
+    .Character {
+      width: 100vw;
+      height: calc(100vw * 1367 / 2048);
+    }
+    .Phone {
+      width: 100vw;
+    }
+    #Shopping_Illus_text {
+      text-align: left;
+      left: 5vw;
+      width: auto;
+      top: -20vh;
+    }
+  }
+
+  .Shopping_Illus::after {
+    font-size: 0.9rem;
+  }
+  .NOA_RAVID {
+    width: 100vw;
+    padding: 0 5vw 0 5vw;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    h6 {
+      font-size: 3rem;
+      span {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        bottom: -1.2rem;
+      }
+    }
+  }
+}
+#NoaRavid_Quote::before {
+  background-image: none;
+  background: #22b573;
+  width: 3px;
+}
+#sec4::before {
+  background: #292929;
+  height: 1px;
+  width: 100vw;
+  content: "";
+  position: absolute;
+}
+
+#Sec5 {
+  h3 {
+    font-size: 3.78vw;
+    line-height: 5vw;
+  }
+  strong {
+    font-size: 3.78vw;
+  }
+  h4 {
+    font-size: 3.78vw;
+  }
+  .logo {
+    div {
+      width: 24vw;
+    }
+  }
+}
