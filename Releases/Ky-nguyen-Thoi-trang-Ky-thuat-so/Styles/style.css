@@ -1401,6 +1401,7 @@ p {
 }
 
 #sec4 #left_col #Origin p {
+  font-size: 1.24vw;
   max-width: 17vw;
   color: white;
 }
