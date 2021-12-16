@@ -1,4 +1,184 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Ultralight.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Thin.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Semibold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Heavy.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Black.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Thin.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-ThinItalic.otf);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-LightItalic.otf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Italic.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-MediumItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Semibold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-SemiboldItalic.otf);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-BoldItalic.otf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Niagara Engraved";
+  src: url(../Fonts/Niagara/NIAGENG.TTF);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Niagara Solid";
+  src: url(../Fonts/Niagara/NIAGSOL.TTF);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedRegular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedUltraBold.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedBold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedLight.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedUltraLight.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/MonumentExtended-Ultralight.otf);
+  font-weight: 100;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,7 +186,8 @@
   margin: 0;
   -webkit-transition: none;
   transition: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "SF Text", "Montserrat", sans-serif;
+  font-smooth: antialiased;
 }
 
 ::-webkit-scrollbar {
@@ -30,13 +211,13 @@
 }
 
 ::-moz-selection {
-  background: #c9c7c7;
-  color: #292929;
+  color: white;
+  background: #241c57;
 }
 
 ::selection {
-  background: #c9c7c7;
-  color: #292929;
+  color: white;
+  background: #241c57;
 }
 
 body,
@@ -50,6 +231,21 @@ div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+p {
+  font-size: 1.1vw;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+a:hover {
+  opacity: 0.4;
 }
 
 section {
@@ -71,79 +267,477 @@ section {
           justify-content: flex-start;
 }
 
-section h2 {
-  margin-top: 50px;
-  text-transform: uppercase;
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+#sec1 {
+  min-height: 100vh;
+  height: calc(100vw * 1080 / 1920);
+  background-image: url(../Images/headerBG.png.jpg);
+  background-size: cover;
+}
+
+#sec1 #header_Content {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#sec1 #header_Content .col {
+  width: 50%;
+  height: 100%;
+}
+
+#sec1 #header_Content .picture {
+  position: absolute;
+  min-height: 10vh;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: #ffffff22;
+  -webkit-backdrop-filter: blur(1vw);
+          backdrop-filter: blur(1vw);
+  -webkit-box-shadow: -1vw 2vw 2vw #00000022;
+          box-shadow: -1vw 2vw 2vw #00000022;
+  border: solid #ffffff56;
+  border-width: 2px 1px 0 1px;
+}
+
+#sec1 #header_Content .picture div {
+  background-position: 50% 30%;
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 9px;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+#sec1 #header_Content .picture h3 {
+  font-family: "Monument";
+  font-weight: 300;
+  color: #241c57;
+  font-size: 1vw;
   margin-bottom: 10px;
 }
 
-section p,
-section ul {
-  width: 90vw;
-  margin-bottom: 1vw;
-  font-size: 1.1vw;
+#sec1 #header_Content .picture h4 {
+  font-family: "Monument";
+  font-weight: 100;
+  font-size: 0.9vw;
+  letter-spacing: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to left, #f338b5, #f75ba3, #ff738a, #ff8178);
+  padding: 5px 10px 5px 10px;
+  color: white;
 }
 
-section ul {
-  margin-left: 5vw;
+#sec1 #header_Content #pic1 {
+  width: 19vw;
+  border-radius: 12vw 12vw 0 0;
+  top: 40vh;
+  right: 7vw;
 }
 
-section div {
+#sec1 #header_Content #pic1 div {
+  height: calc((32 / 100) * (100vw * 1080 / 1920));
+  background-image: url(../Images/headerpic2.jpg);
+  border-radius: 9.5vw 9.5vw 0 0;
+}
+
+#sec1 #header_Content #pic2 {
+  width: 23vw;
+  border-radius: 11.5vw 11.5vw 0 0;
+  top: 10vh;
+  left: 5vw;
+}
+
+#sec1 #header_Content #pic2 div {
+  height: calc((42 / 100) * (100vw * 1080 / 1920));
+  background-image: url(../Images/headerpic1.jpg);
+  border-radius: 11.5vw 11.5vw 0 0;
+}
+
+#sec1 #header_Content #left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10vh 0 0 5vw;
+}
+
+#sec1 #header_Content #left .logo {
+  font-family: "Monument";
+  color: #201a57;
+  font-size: 1.3vw;
+  line-height: 1.4vw;
+  font-weight: 400;
+}
+
+#sec1 #header_Content #left .Title {
+  background-image: url(../Images/Title.png);
+  background-size: contain;
+  width: 38vw;
+  height: 38vh;
+  margin-bottom: 20px;
+}
+
+#sec1 #header_Content #left .Chapeau {
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #231d59;
+  font-size: 1.24vw;
+  width: 38vw;
+}
+
+#sec1::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 70vh;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff00), to(#ffffff));
+  background: linear-gradient(to bottom, #ffffff00 50%, #ffffff);
+}
+
+#sec2 .sec2_bg {
+  width: 100vw;
+  height: calc(100vw * 520 / 1920);
+  background-image: url(../Images/sec2_bg.png);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#sec2 .sec2_box {
+  width: 62vw;
+  height: calc(62vw * 209 / 1350);
+  background-image: url(../Images/sec2_box.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(1vw 1vw 1.3vw #00000026);
+          filter: drop-shadow(1vw 1vw 1.3vw #00000026);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#sec2 .sec2_box h2 {
+  font-family: "Monument";
+  font-size: 2.4vw;
+  font-weight: 300;
+  text-align: center;
+  line-height: 3vw;
+  width: 80%;
+  color: #241c57;
+}
+
+#sec2 .sec2_box .decor {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#sec2 .sec2_box #Tounge {
+  background-image: url(../Images/Tounge_emo.png);
+  width: 8vw;
+  height: 8vw;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(50%) translateX(-50%);
+          transform: translateY(50%) translateX(-50%);
+}
+
+#sec2 .sec2_box #Shopping {
+  background-image: url(../Images/Shopping_sec2.png);
+  width: 6vw;
+  height: 6vw;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
+}
+
+#sec2 .sec2_box #Sec2_1 {
+  border-radius: 50%;
+  background: #241c57;
+  width: 4vw;
+  height: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 3vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+  font-size: 2.3vw;
+  font-family: "Monument";
+  font-weight: 400;
+}
+
+#sec2::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  opacity: 0.4;
+  background-image: url(../Images/sec2_noise.jpg);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+}
+
+#sec3 p {
+  font-size: 1.24vw;
+  width: 62vw;
+  margin-bottom: 20px;
+}
+
+#sec3 img {
   width: 100%;
 }
 
-#header {
-  background-image: url("../Images/header.png");
-  aspect-ratio: calc(1920 / 1005);
+#sec3 h3 {
+  text-transform: uppercase;
+  font-size: 2.4vw;
+  font-weight: 700;
+  background: -webkit-gradient(linear, right top, left top, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to left, #f338b5, #f75ba3, #ff738a, #ff8178);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 40px;
 }
 
-#heading1 {
-  background-image: url("../Images/tieu-de1.png");
-  aspect-ratio: calc(1920 / 448);
+#sec4 img {
+  width: 100%;
 }
 
-#Graphic1 {
-  background-image: url("../Images/graphic1.png");
-  aspect-ratio: calc(1920 / 1279);
+#sec4 h3 {
+  text-transform: uppercase;
+  font-size: 2.4vw;
+  font-weight: 700;
+  background: -webkit-gradient(linear, right top, left top, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to left, #f338b5, #f75ba3, #ff738a, #ff8178);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-#graphic2 {
-  background-image: url("../Images/graphic2.png");
-  aspect-ratio: calc(1920 / 1071);
+#sec4 p {
+  font-size: 1.24vw;
+  width: 62vw;
+  margin-bottom: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#heading2 {
-  background-image: url("../Images/tieu-de2.png");
-  aspect-ratio: calc(1920 / 448);
+#sec4 p span {
+  margin-right: 14vw;
+  font-style: italic;
 }
 
-#graphic3 {
-  background-image: url("../Images/graphic3.png");
-  aspect-ratio: calc(1920 / 1042);
+#sec4 .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 50vw;
 }
 
-#graphic4 {
-  background-image: url("../Images/graphic4.png");
-  aspect-ratio: calc(2400 / 1250);
+#sec4 .col p {
+  width: 100%;
 }
 
-#graphic5 {
-  background-image: url("../Images/graphic5.png");
-  aspect-ratio: calc(1920 / 900);
+#sec4 .col img {
+  width: 100%;
 }
 
-#heading3 {
-  background-image: url("../Images/tieu-de3.png");
-  aspect-ratio: calc(1920 / 448);
+#sec5 img {
+  width: 100%;
 }
 
-#graphic6 {
-  background-image: url("../Images/graphic6.png");
-  aspect-ratio: calc(1920 / 780);
+#sec5 p {
+  font-size: 1.24vw;
+  width: 62vw;
+  margin-bottom: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#sec5 p span {
+  margin-right: 14vw;
+  font-style: italic;
 }
 
 #footer {
-  margin-top: 50vh;
-  background: #292929;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer h4 {
+  text-align: center;
+}
+
+#footer span {
+  font-weight: 300;
+}
+
+#footer .line {
+  background: -webkit-gradient(linear, right top, left top, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to left, #f338b5, #f75ba3, #ff738a, #ff8178);
+  height: 1px;
+  width: 62vw;
+  margin-top: 15vh;
+}
+
+#footer .Bottom {
+  margin-top: 10vh;
+  height: 15vh;
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to left, #f338b5, #f75ba3, #ff738a, #ff8178);
+}
+
+#footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 2vw;
+}
+
+#footer .ver_line {
+  width: 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to bottom, #f338b5, #f75ba3, #ff738a, #ff8178);
+}
+
+#footer h4,
+#footer h5 {
+  background: -webkit-gradient(linear, right top, left top, from(#f338b5), color-stop(#f75ba3), color-stop(#ff738a), to(#ff8178));
+  background: linear-gradient(to left, #f338b5, #f75ba3, #ff738a, #ff8178);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#footer .vdfm,
+#footer .madthc {
+  width: 6vw;
+  height: 6vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#footer .vdfm {
+  background-image: url(../Vectors/VDFM.svg);
+}
+
+#footer .madthc {
+  background-image: url(../Vectors/MADTHC.svg);
 }
 /*# sourceMappingURL=style.css.map */
