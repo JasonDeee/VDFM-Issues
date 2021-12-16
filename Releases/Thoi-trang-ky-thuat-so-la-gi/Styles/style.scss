@@ -1,0 +1,170 @@
+@import "./Fontfaces";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: "SF Text";
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  transition: width 0.5s ease-out;
+  transform: translateX(5px);
+}
+::-webkit-scrollbar:hover {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #e9e7e756;
+}
+::-webkit-scrollbar-thumb {
+  background: #151515;
+}
+
+::selection {
+  color: white;
+  background: #241c57;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+}
+main {
+  background: #292929;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+  }
+  p {
+    font-size: 1.24vw;
+    width: 62vw;
+    margin-bottom: 20px;
+
+    position: relative;
+    display: flex;
+
+    color: white;
+  }
+  .blur,
+  .dblur {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100vw;
+  }
+  .blur::after,
+  .dblur::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+
+    bottom: 0;
+    background: linear-gradient(to top, #292929 5%, #29292900);
+  }
+  .dblur::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    background: linear-gradient(to bottom, #292929 5%, #29292900);
+  }
+  .sT {
+    max-width: 62vw;
+    img {
+      box-shadow: 2vw 2vw 2vw #00000056;
+      margin-bottom: 20px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    max-width: 62vw;
+    margin-bottom: 20px;
+    gap: 20px;
+
+    align-items: stretch;
+    justify-content: center;
+    img {
+      width: 62%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    br {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+#footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  h4 {
+    text-align: center;
+  }
+
+  span {
+    font-weight: 300;
+  }
+
+  .line {
+    background: white;
+    height: 1px;
+    width: 62vw;
+    margin-top: 15vh;
+  }
+
+  .Bottom {
+    margin-top: 10vh;
+    height: 15vh;
+    width: 100%;
+    background: white;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2vw;
+  }
+  .ver_line {
+    width: 1px;
+    background: white;
+  }
+  h4,
+  h5 {
+    color: white;
+  }
+  .vdfm,
+  .madthc {
+    width: 6vw;
+    height: 6vw;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .vdfm {
+    background-image: url(../Vectors/VDFM.svg);
+  }
+  .madthc {
+    background-image: url(../Vectors/MADTHC.svg);
+  }
+}

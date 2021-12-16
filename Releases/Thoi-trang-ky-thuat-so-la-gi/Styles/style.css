@@ -1,0 +1,410 @@
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Ultralight.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Thin.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Semibold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Heavy.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "SF Display";
+  src: url(../Fonts/SF/SanFranciscoDisplay-Black.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Thin.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-ThinItalic.otf);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-LightItalic.otf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Italic.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-MediumItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Semibold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-SemiboldItalic.otf);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Text";
+  src: url(../Fonts/SF/SanFranciscoText-BoldItalic.otf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Niagara Engraved";
+  src: url(../Fonts/Niagara/NIAGENG.TTF);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Niagara Solid";
+  src: url(../Fonts/Niagara/NIAGSOL.TTF);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedRegular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedUltraBold.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedBold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedLight.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/SVN-MonumentExtendedUltraLight.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url(../Fonts/Monument/MonumentExtended-Ultralight.otf);
+  font-weight: 100;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "SF Text";
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+::-webkit-scrollbar:hover {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e9e7e756;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #151515;
+}
+
+::-moz-selection {
+  color: white;
+  background: #241c57;
+}
+
+::selection {
+  color: white;
+  background: #241c57;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+}
+
+main {
+  background: #292929;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main p {
+  font-size: 1.24vw;
+  width: 62vw;
+  margin-bottom: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+main .blur,
+main .dblur {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+main .blur::after,
+main .dblur::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #292929), to(#29292900));
+  background: linear-gradient(to top, #292929 5%, #29292900);
+}
+
+main .dblur::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #292929), to(#29292900));
+  background: linear-gradient(to bottom, #292929 5%, #29292900);
+}
+
+main .sT {
+  max-width: 62vw;
+}
+
+main .sT img {
+  -webkit-box-shadow: 2vw 2vw 2vw #00000056;
+          box-shadow: 2vw 2vw 2vw #00000056;
+  margin-bottom: 20px;
+}
+
+main .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 62vw;
+  margin-bottom: 20px;
+  gap: 20px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .row img {
+  width: 62%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .row br {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#footer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer h4 {
+  text-align: center;
+}
+
+#footer span {
+  font-weight: 300;
+}
+
+#footer .line {
+  background: white;
+  height: 1px;
+  width: 62vw;
+  margin-top: 15vh;
+}
+
+#footer .Bottom {
+  margin-top: 10vh;
+  height: 15vh;
+  width: 100%;
+  background: white;
+}
+
+#footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 2vw;
+}
+
+#footer .ver_line {
+  width: 1px;
+  background: white;
+}
+
+#footer h4,
+#footer h5 {
+  color: white;
+}
+
+#footer .vdfm,
+#footer .madthc {
+  width: 6vw;
+  height: 6vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#footer .vdfm {
+  background-image: url(../Vectors/VDFM.svg);
+}
+
+#footer .madthc {
+  background-image: url(../Vectors/MADTHC.svg);
+}
+/*# sourceMappingURL=style.css.map */
