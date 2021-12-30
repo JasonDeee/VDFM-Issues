@@ -1,0 +1,136 @@
+@import "./Fontfaces";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: "SF Text";
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  transition: width 0.5s ease-out;
+  transform: translateX(5px);
+}
+::-webkit-scrollbar:hover {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #e9e7e756;
+}
+::-webkit-scrollbar-thumb {
+  background: #151515;
+}
+
+::selection {
+  color: white;
+  background: #241c57;
+}
+
+body,
+html,
+main {
+  width: 100vw;
+}
+
+section {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #c8dfe5;
+  background: #13131b;
+
+  p,
+  ul {
+    font-size: 1.23vw;
+    width: 64vw;
+    margin-bottom: 20px;
+    position: relative;
+    li {
+      margin-left: 7vw;
+    }
+  }
+  ul p {
+    margin-bottom: 5px;
+  }
+  h3 {
+    width: 64vw;
+    font-size: 1.92vw;
+    font-weight: 800;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .chapeau {
+    max-width: 38vw;
+    margin-bottom: 40px;
+  }
+}
+
+#footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  h4 {
+    text-align: center;
+  }
+
+  span {
+    font-weight: 300;
+  }
+
+  .line {
+    background: #c8dfe5;
+    height: 1px;
+    width: 62vw;
+    margin-top: 15vh;
+  }
+
+  .Bottom {
+    margin-top: 10vh;
+    height: 15vh;
+    width: 100%;
+    background: #c8dfe5;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2vw;
+  }
+  .ver_line {
+    width: 1px;
+    background: #c8dfe5;
+  }
+  h4,
+  h5 {
+    color: #c8dfe5;
+  }
+  .vdfm,
+  .madthc {
+    width: 6vw;
+    height: 6vw;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .vdfm {
+    background-image: url(../Vectors/VDFM.svg);
+  }
+  .madthc {
+    background-image: url(../Vectors/MADTHC.svg);
+  }
+}
