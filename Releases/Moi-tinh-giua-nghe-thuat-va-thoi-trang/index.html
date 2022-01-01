@@ -26,6 +26,46 @@
       style="display: none"
     />
 
+    <nav class="return_button">
+      <img src="../../Images/HomePageIcon.svg" alt="" />
+
+      <a href="https://vdfm.ga/#/"></a>
+
+      <style>
+        .return_button {
+          display: flex;
+          position: fixed;
+          left: 5vw;
+          top: 5vw;
+
+          width: 50px;
+          height: 50px;
+          z-index: 99;
+          padding: 10px;
+
+          background: #292929;
+          border-radius: 50%;
+
+          transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+          cursor: pointer;
+        }
+        .return_button img,
+        .return_button a {
+          width: 100%;
+          height: 100%;
+          overflow: visible;
+        }
+        .return_button a {
+          position: absolute;
+        }
+
+        .return_button:hover {
+          opacity: 0.4;
+        }
+      </style>
+      <script src="../../BackToHomePage.js"></script>
+    </nav>
+
     <main>
       <img src="./Images/Moi-tinh-giua-nghe-thuat-va-thoi-trang.jpg" alt="" />
     </main>

@@ -106,21 +106,21 @@ var dx = sx, // For container positions And Force (Percentage 70% Recommended)
   dy = sy,
   Force = 80;
 
-const wheelValidate = (e) => {
-  var isTouchPad = e.wheelDeltaY
-    ? e.wheelDeltaY === -3 * e.deltaY
-    : e.deltaMode === 0;
+// const wheelValidate = (e) => {
+//   var isTouchPad = e.wheelDeltaY
+//     ? e.wheelDeltaY === -3 * e.deltaY
+//     : e.deltaMode === 0;
 
-  Force = isTouchPad ? 800 : 80;
-};
+//   Force = isTouchPad ? 800 : 80;
+// };
 
-const touch = () => {
-  Force = 800;
-};
-//
+// const touch = () => {
+//   Force = 800;
+// };
+// //
 
-window.addEventListener("wheel", wheelValidate);
-window.addEventListener("touchstart", touch);
+// window.addEventListener("wheel", wheelValidate);
+// window.addEventListener("touchstart", touch);
 
 const li = (a, b, n) => {
   return (1 - n) * a + n * b;
